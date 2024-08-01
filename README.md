@@ -14,10 +14,14 @@ The final dataset used comprised data from 234 Control and 368 ASD subjects. 5 b
 
 ## Pipeline scripts
 
-- 01_generate_alpha_region_database: Given a database containing alpha EEG parameter (amplitude, n peaks, bandwidth, aperiodic slope and offset) for every channel and every block, this code compute an estimate for every parameter based on some regions of interest (Frontal, Posteriorior, Central x Right, Left, Midline) to ease statistical analyses.
+- 01_generate_alpha_region_database: Given a database containing alpha EEG parameter (amplitude, n peaks, bandwidth, aperiodic slope and offset) for every channel and every block, this code computes the average value for every parameter in some regions of interest (Frontal, Posteriorior, Central x Right, Left, Midline).
 - 02_EEGchannels_Plot&Visualization: this code allows visualizations of parameter values over EEG montage. A visualization is here made for every group. Contrast for eyes open vs. eyes closed are also visualized.
 - 03_Statistics_ClosedRestingState: this code performs some preliminary statistic analyses, such as: descriptive statistics, mixed linear model to assess group differences over time on alpha/aper offset parameters. ASD subjects are then clustered based on IQ, and other mixed linear model are performed.
 - 04_Statistics_OpenRestingState: this code performs some preliminary statistic analyses, such as: descriptive statistics, mixed linear model to assess group differences over time on alpha/aper offset parameters. ASD subjects are then clustered based on IQ, and other mixed linear model are performed.
+
+## Preliminary Results
+
+No differences between ASD and TD are here found. More promising is the clustering approach.
 
 ## Installation
 

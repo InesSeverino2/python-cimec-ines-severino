@@ -2,7 +2,7 @@
 
 ## Description
 
-The main goal of this project is to define how different patterns of periodic and aperiodic EEG activity are associated with different developmental profiles in autistic children. We applied here an algorithm for the explicit parameterization of neural power spectra (Donoghe et al. 2020) to resting-state EEG data of autistic and control children.
+The main goal of this project is to define how different patterns of periodic and aperiodic EEG activity are associated with different developmental profiles in autistic children. After datapreprocessing, we applied here an algorithm for the explicit parameterization of neural power spectra (Donoghe et al. 2020) to resting-state EEG data of autistic and control children.
 
 This spectral parameterization ("specparam", https://github.com/fooof-tools/fooof ) algorithm fits components of power spectral densities (PSDs) in a way that is informed by physiology, without relying on predefined canonical frequency bands. This method has recently been introduced in pediatric research as a promising approach for addressing inter-individual differences in power spectra and for elucidating the role of aperiodic activity in various cognitive processes (Ostlund et al., 2022).
 
@@ -21,7 +21,7 @@ The final dataset used comprised data from 234 Control and 368 ASD subjects. 5 b
 
 ## Preliminary Results
 
-No differences between ASD and TD are here found. More promising is the clustering approach.
+No differences between ASD and TD are here found. More promising is the clustering approach, despite clustering solution validation could be potentially improved.
 
 ## Installation
 

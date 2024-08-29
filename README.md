@@ -7,14 +7,14 @@ The main goal of this project is to define how different patterns of periodic an
 This spectral parameterization ("specparam", https://github.com/fooof-tools/fooof ) algorithm fits components of power spectral densities (PSDs) in a way that is informed by physiology, without relying on predefined canonical frequency bands. This method has recently been introduced in pediatric research as a promising approach for addressing inter-individual differences in power spectra and for elucidating the role of aperiodic activity in various cognitive processes (Ostlund et al., 2022).
 
 Here, starting from the output of specparam, I organized data in a unique dataset and performed some preliminary visualizations and statistical analyses to test the answer these research questions:
-1. Are there differences in alpha amplitude and aperiodic slope between ASD and TD subjects?
+1. Are there differences in alpha amplitude between ASD and TD subjects?
 2. Is there an association in autism between alpha amplitude and cognitive development (Wang et., 2013, Mathewson et al., 2012; Edgar et al., 2015)?
 
 The final dataset used comprised data from 234 Control and 368 ASD subjects. 5 blocks of eyes open and 5 blocks of eyes closed (2 min duration each) were collected for every subject. Open-eyes and closed-eyes resting state data were analyzed separately, as previous research indicates significant differences in alpha activity between these conditions (Barry et al., 2007).
 
 ## Pipeline scripts
 
-- 01_generate_alpha_region_database: Given a database containing alpha EEG parameter (amplitude, n peaks, bandwidth, aperiodic slope and offset) for every channel and every block, this code computes the average value for every parameter in some regions of interest (Frontal, Posteriorior, Central x Right, Left, Midline).
+- 01_generate_alpha_region_database: Given a database containing alpha EEG amplitude for every channel and every block, this code computes the average value for the parameter in some regions of interest (Frontal, Posteriorior, Central x Right, Left, Midline).
 - 02_EEGchannels_Plot&Visualization: this code allows visualizations of parameter values over EEG montage. A visualization is here made for every group. Contrast for eyes open vs. eyes closed are also visualized.
 - 03_Statistics_ClosedRestingState: this code performs some preliminary statistic analyses, such as: descriptive statistics, mixed linear model to assess group differences over time on alpha/aper offset parameters. ASD subjects are then clustered based on IQ, and other mixed linear model are performed.
 - 04_Statistics_OpenRestingState: this code performs some preliminary statistic analyses, such as: descriptive statistics, mixed linear model to assess group differences over time on alpha/aper offset parameters. ASD subjects are then clustered based on IQ, and other mixed linear model are performed.
